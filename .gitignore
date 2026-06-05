@@ -165,3 +165,4 @@ htmlcov/
 .idea/
 *.sublime-project
 *.sublime-workspace
+.sixth/
