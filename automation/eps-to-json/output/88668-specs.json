@@ -1,0 +1,193 @@
+{
+  "source_svg": "88668-vector.svg",
+  "document": {
+    "width_raw": "5.07in",
+    "height_raw": "7.31in",
+    "width_in": 5.07,
+    "height_in": 7.31,
+    "viewBox_raw": "49.0 0.0 274.0 395.0",
+    "viewBox": [
+      49.0,
+      0.0,
+      274.0,
+      395.0
+    ],
+    "preserveAspectRatio": "xMidYMid meet",
+    "svg_units_per_inch_x": 54.043392504930964,
+    "svg_units_per_inch_y": 54.03556771545828
+  },
+  "groups": [
+    {
+      "id": "surface1"
+    },
+    {
+      "id": "backer",
+      "clip-path": "url(#backer-clip-88668)"
+    },
+    {
+      "id": "room_number"
+    },
+    {
+      "id": "braille_text"
+    },
+    {
+      "id": "FIELD_ANCHORS"
+    }
+  ],
+  "text_fields": [
+    {
+      "id": "ROOM_NUMBER",
+      "x": 143.203,
+      "y": 224.574,
+      "text-anchor": "middle",
+      "font-family": "Polaris_V2_Medium",
+      "font-size": 52.3125,
+      "fill": "rgb(100%,100%,100%)",
+      "value": "000"
+    },
+    {
+      "id": "BRAILLE_TEXT",
+      "x": 91.3613,
+      "y": 250.165,
+      "text-anchor": "start",
+      "font-family": "FuturaBT-MediumCondensed",
+      "font-size": 18.0,
+      "fill": "rgb(100%,100%,100%)",
+      "value": "000"
+    }
+  ],
+  "rects": [
+    {
+      "id": "TEXT_FIELD__ROOM_NUM",
+      "x": 88.416,
+      "y": 183.77,
+      "width": 109.575,
+      "height": 40.804,
+      "data-cx": 143.203,
+      "data-cy": 204.172,
+      "data-font-size": 52.3125,
+      "data-baseline-y": 183.77,
+      "data-text-align": "center",
+      "data-vertical-align": "cap-center",
+      "data-font-family": "Polaris_V2_Medium",
+      "data-font-file": "Polaris_V2_Medium.otf",
+      "data-cap-height-ratio": 0.78,
+      "data-ada-max-cap-in": 2.0,
+      "data-ada-clearance-in": 0.375,
+      "style": "fill:none;stroke:#000000;stroke-width:0.01;opacity:0",
+      "fill": "none",
+      "stroke": "none"
+    },
+    {
+      "id": "TEXT_FIELD__BRAILLE",
+      "x": 91.3613,
+      "y": 237.333,
+      "width": 32.4,
+      "height": 12.832,
+      "data-cx": 107.561,
+      "data-cy": 243.749,
+      "data-text-align": "start",
+      "data-braille-rule": "left-align-with-text",
+      "data-glyph-advance-svg": 36.478,
+      "data-vertical-align": "cap-center",
+      "data-font-family": "FuturaBT-MediumCondensed",
+      "data-font-file": "FUTURAMC.TTF",
+      "data-cap-height-ratio": 0.7129,
+      "data-cap-height-svg": 12.832,
+      "data-font-size": 18.0,
+      "data-baseline-y": 237.333,
+      "data-field-type": "braille-label",
+      "style": "fill:none;stroke:#000000;stroke-width:0.01;opacity:0",
+      "fill": "none",
+      "stroke": "none"
+    }
+  ],
+  "circles": [
+    {
+      "id": "ANCHOR__ROOM_NUM",
+      "cx": 162.699,
+      "cy": 189.074,
+      "r": 1.0,
+      "style": "fill:none;stroke:none;opacity:0"
+    },
+    {
+      "id": "ANCHOR__BRAILLE",
+      "cx": 162.699,
+      "cy": 243.749,
+      "r": 1.0,
+      "style": "fill:none;stroke:none;opacity:0"
+    }
+  ],
+  "paths": [
+    {
+      "d": "M 321.066406 338.679688 L 294.023438 55.175781 L 280.039062 55.175781 L 276.304688 18.050781 L 64.566406 65.300781 L 64.566406 325.179688 L 77.628906 325.179688 L 84.269531 392.675781 Z M 321.066406 338.679688 "
+    },
+    {
+      "style": " stroke:none;fill-rule:nonzero;fill:rgb(18.327332%,22.067261%,26.527405%);fill-opacity:1;",
+      "d": "M 288.929688 1.84375 L 51.207031 55.820312 L 51.207031 339.207031 L 321.097656 339.207031 L 288.929688 1.84375 "
+    }
+  ],
+  "images": [
+    {
+      "id": "image5",
+      "width": 720.0,
+      "height": 410.0,
+      "href_type": "embedded_base64_image",
+      "href_preview": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtAAAAGaCAIAAACpHuNcAAAABmJLR0QA/w..."
+    }
+  ],
+  "semantic_fields": {
+    "room_number": {
+      "field_id": "TEXT_FIELD__ROOM_NUM",
+      "value": "000",
+      "x": 88.416,
+      "y": 183.77,
+      "width": 109.575,
+      "height": 40.804,
+      "center_x": 143.203,
+      "center_y": 204.172,
+      "baseline_y": 183.77,
+      "font_family": "Polaris_V2_Medium",
+      "font_file": "Polaris_V2_Medium.otf",
+      "font_size": 52.3125,
+      "text_align": "center",
+      "vertical_align": "cap-center",
+      "cap_height_ratio": 0.78,
+      "ada_max_cap_in": 2.0,
+      "ada_clearance_in": 0.375,
+      "x_in": 1.636019,
+      "y_in": 3.400908,
+      "width_in": 2.027537,
+      "height_in": 0.755132,
+      "center_x_in": 2.649778,
+      "center_y_in": 3.778474
+    },
+    "braille": {
+      "field_id": "TEXT_FIELD__BRAILLE",
+      "value": "000",
+      "x": 91.3613,
+      "y": 237.333,
+      "width": 32.4,
+      "height": 12.832,
+      "center_x": 107.561,
+      "center_y": 243.749,
+      "baseline_y": 237.333,
+      "font_family": "FuturaBT-MediumCondensed",
+      "font_file": "FUTURAMC.TTF",
+      "font_size": 18.0,
+      "text_align": "start",
+      "vertical_align": "cap-center",
+      "cap_height_ratio": 0.7129,
+      "cap_height_svg": 12.832,
+      "glyph_advance_svg": 36.478,
+      "braille_rule": "left-align-with-text",
+      "field_type": "braille-label",
+      "x_in": 1.690517,
+      "y_in": 4.392163,
+      "width_in": 0.599518,
+      "height_in": 0.237473,
+      "center_x_in": 1.990271,
+      "center_y_in": 4.510899
+    }
+  }
+}
