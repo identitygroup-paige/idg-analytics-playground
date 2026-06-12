@@ -1,0 +1,11 @@
+RAW_SQLSERVER
+    Exact-ish copies from SQL Server
+
+STG_SQLSERVER
+    Cleaned types, renamed columns, excluded sensitive fields
+
+MART_REVENUE
+    Self-service views/tables for accounting, PM, C-suite
+
+DATA_VALIDATION_DEV
+    Metadata, row counts, validation checks

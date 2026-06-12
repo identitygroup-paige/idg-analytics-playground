@@ -1,0 +1,97 @@
+{
+  "source_eps": "88668-source.eps",
+  "eps_source": {
+    "braille": {
+      "ps_command": "91.3613 249.415 mo (BRAILLE)sh",
+      "start_x": 91.3613,
+      "baseline_y": 249.415,
+      "font": "VKKPTP+FuturaBT-MediumCondensed*1",
+      "font_matrix": [
+        18.0001,
+        0.0,
+        0.0,
+        -18.0001,
+        0.0,
+        0.0
+      ],
+      "font_size": 18.0001,
+      "value": "BRAILLE",
+      "start_x_pt": 121.8151,
+      "baseline_y_pt": 332.5533,
+      "font_size_pt": 24.0001,
+      "glyph_advance_pt": null
+    },
+    "room_number": {
+      "ps_command": "88.415 215.527 mo (245) [36.478 36.4785 0 ] xsh",
+      "start_x": 88.415,
+      "baseline_y": 215.527,
+      "font": "VKKPTQ+GalaxiePolaris-Medium*1",
+      "font_matrix": [
+        69.7503,
+        0.0,
+        0.0,
+        -69.7503,
+        0.0,
+        0.0
+      ],
+      "font_size": 69.7503,
+      "glyph_advances": [
+        36.478,
+        36.4785,
+        0.0
+      ],
+      "glyph_advance": 36.478,
+      "value": "245",
+      "start_x_pt": 117.8867,
+      "baseline_y_pt": 287.3693,
+      "font_size_pt": 93.0004,
+      "glyph_advance_pt": 48.6373
+    }
+  },
+  "production_text_commands": [
+    {
+      "text": "BRAILLE",
+      "text_kind": "braille",
+      "render_command": "sh",
+      "font": "VKKPTP+FuturaBT-MediumCondensed*1",
+      "font_matrix": [
+        18.0001,
+        0.0,
+        0.0,
+        -18.0001,
+        0.0,
+        0.0
+      ],
+      "font_size": 18.0001,
+      "start_x": 91.3613,
+      "baseline_y": 249.415,
+      "ps_command": "91.3613 249.415 mo (BRAILLE)sh"
+    },
+    {
+      "text": "245",
+      "text_kind": "room_number",
+      "render_command": "xsh",
+      "font": "VKKPTQ+GalaxiePolaris-Medium*1",
+      "font_matrix": [
+        69.7503,
+        0.0,
+        0.0,
+        -69.7503,
+        0.0,
+        0.0
+      ],
+      "font_size": 69.7503,
+      "start_x": 88.415,
+      "baseline_y": 215.527,
+      "glyph_advances": [
+        36.478,
+        36.4785,
+        0.0
+      ],
+      "glyph_advance": 36.478,
+      "ps_command": "88.415 215.527 mo (245) [36.478 36.4785 0 ] xsh"
+    }
+  ],
+  "raw_text_command_count": 89,
+  "production_text_command_count": 2
+}
