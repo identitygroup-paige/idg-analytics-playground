@@ -1,0 +1,15 @@
+{
+  "brand": "AmericInn 2022",
+  "sku": "88728",
+  "sign_type": "Informational",
+  "sign_layout": "Cropped face from 88728.eps 6-up grid",
+  "face_bounds": {
+    "x": 19.1,
+    "y": 32.1,
+    "w": 137.20000000000002,
+    "h": 137.3
+  },
+  "placeholder_copy": "Please use your guest room key card when doors are locked",
+  "fields": [],
+  "static": true
+}

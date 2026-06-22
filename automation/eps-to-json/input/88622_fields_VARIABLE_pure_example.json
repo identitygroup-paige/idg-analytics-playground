@@ -1,0 +1,172 @@
+{
+  "template_type": "VARIABLE_pure",
+  "static": false,
+  "combination_sign": false,
+  "sku": "88622",
+  "matcode": "88622",
+  "e4_form_code": "UPTRMN007003EA10",
+  "brand": "Intown",
+  "sub_brand": "Uptown Suites",
+  "sign_type": "Room Number",
+  "description": "Uptown Suites — Room Number",
+  "physical_size": {
+    "width_in": 7.0,
+    "height_in": 3.25,
+    "shape": "rectangle"
+  },
+  "page_size": {
+    "width_in": 7.0,
+    "height_in": 3.25,
+    "bleed_in": 0.0,
+    "_note": "No bleed per Jerry's rule — white substrate, no digital print to edge."
+  },
+  "svg_viewBox_in": [
+    0,
+    0,
+    7.0,
+    3.25
+  ],
+  "units_per_inch": 72,
+  "manufacturing": {
+    "substrate": {
+      "material": "1/8 inch Clear Acrylic",
+      "color_origin": "Substrate is white (clear acrylic with white backing/lamination); no /Face-Cut separation required."
+    },
+    "face_paint": {
+      "code": "MAP-202-MA",
+      "system": "Matthews Paint",
+      "name": "White",
+      "process": "Surface Paint Color",
+      "spot_color_name_in_pdf": null,
+      "_note": "Per Jerry's 90253 reference pattern, white-substrate signs omit the /Face-Cut separation entirely."
+    },
+    "copy_paint": {
+      "code": "PMS Reflex Blue",
+      "system": "Pantone",
+      "name": "Reflex Blue C",
+      "process": "Surface Print Copy",
+      "spot_color_name_in_pdf": "Text",
+      "cmyk_fallback": {
+        "c": 69.5,
+        "m": 57.77,
+        "y": 0,
+        "k": 52.01
+      },
+      "cmyk_source": "Production archive scan (142 archival files)",
+      "alt_rgb_per_jerry_90253": {
+        "r": 0.146379,
+        "g": 0.202628,
+        "b": 0.479864
+      },
+      "alt_rgb_note": "Jerry's 90253 reference uses RGB ICCBased altspace, not CMYK. Match for byte-identical altspace if needed; CMYK fallback is the WebEsko-spec default."
+    },
+    "braille": {
+      "process": "Surface-applied braille per ADA Grade 2",
+      "spot_color_name_in_pdf": "Braille",
+      "cmyk_fallback": {
+        "c": 100,
+        "m": 100,
+        "y": 0,
+        "k": 0
+      }
+    },
+    "mounting": "VHB Tape (per MSDQ)"
+  },
+  "unit_conversion": {
+    "rule": "All EPS-source numeric values (font_size, positions) are in EPS userspace units. Convert to PDF points via formula below.",
+    "formula": "pt_value = eps_value × (72 / units_per_inch)",
+    "for_this_brand": {
+      "units_per_inch": 72,
+      "pt_per_unit": 1.0,
+      "example": "EPS font_size 28.0 × (72/72) = 28.0 pt"
+    }
+  },
+  "esko_spot_colors_used": [
+    "Text",
+    "Braille"
+  ],
+  "esko_spot_colors_omitted": {
+    "Face-Cut": "White acrylic substrate per Jerry 90253 reference — no face paint separation needed."
+  },
+  "reference": {
+    "jerry_template": null,
+    "modeled_after": "Jerry's 90253 reference (Intown Stairwell) — same white-acrylic + Reflex Blue pattern.",
+    "msdq_page": 6
+  },
+  "fields": [
+    {
+      "id": "ROOM_NUMBER",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 251.5019,
+        "y_pt_top": 61.4189,
+        "w_pt": 225.498,
+        "h_pt": 92.62,
+        "_coord_system": "y-down from face top-left; ready for SVG/PDF y-up flip by renderer"
+      },
+      "font": {
+        "family": "Swiss721BT-Bold",
+        "fallback_family": "Swiss 721 Md BT Medium",
+        "font_size_pt": 90.0,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      },
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      }
+    },
+    {
+      "id": "BRAILLE_TEXT",
+      "type": "braille",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 325.3429,
+        "y_pt_top": 180.5849,
+        "w_pt": 81.001,
+        "h_pt": 17.82
+      },
+      "font": {
+        "family": "California Braille (IDGcaliforniabraille-Regular)",
+        "font_size_pt": 18.0,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      },
+      "overlay_spot_color": {
+        "spot_name": "Braille",
+        "rule": "Renderer MUST overlay translated braille glyphs in the /Braille named spot color from the base PDF. Do NOT use /White or any other spot."
+      },
+      "braille_translation": {
+        "encoding": "Grade 2 (English Braille)",
+        "rule": "Renderer can use either path. Path A (recommended): write ascii_braille_for_placeholder literally through the California Braille font. Path B: translate source_text on the renderer side using the Grade 2 numeric pattern (number indicator '#' + dropped-letter digits, a=1...j=0).",
+        "source_text": "423",
+        "ascii_braille_for_placeholder": "#dbc",
+        "ascii_braille_convention": {
+          "number_indicator": "#",
+          "digit_to_letter": {
+            "0": "j",
+            "1": "a",
+            "2": "b",
+            "3": "c",
+            "4": "d",
+            "5": "e",
+            "6": "f",
+            "7": "g",
+            "8": "h",
+            "9": "i"
+          },
+          "examples": {
+            "423": "#dbc",
+            "244": "#bdd",
+            "1242": "#abdb"
+          }
+        },
+        "do_not_use": {
+          "rendering_literal_digits_as_braille_font": "Writing '(423)' literally through California Braille font does NOT produce valid Grade 2 braille. Variable digits MUST be pre-translated to ASCII Braille (number indicator + dropped letters) before rendering through the font.",
+          "unicode_braille_codepoints": "California Braille is a SHAPE FONT that maps ASCII characters to braille glyph shapes. It does NOT render Unicode braille codepoints (U+2800-U+28FF). Passing Unicode strings to the font produces wrong output."
+        }
+      }
+    }
+  ]
+}

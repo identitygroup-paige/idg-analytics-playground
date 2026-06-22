@@ -195,4 +195,7 @@ print(f"Raw text commands found: {len(raw_commands)}")
 print(f"Production text commands found: {len(production_commands)}")
 
 for command in production_commands:
-    print(command)
+    print(
+        f"- {command['text_kind']}: {command['text']} "
+        f"at ({command['start_x']}, {command['baseline_y']})"
+    )

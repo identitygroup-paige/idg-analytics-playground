@@ -1,0 +1,330 @@
+{
+  "template_type": "VARIABLE_pure",
+  "static": false,
+  "sku": "88635",
+  "matcode": "88635",
+  "e4_form_code": "UPTSTR015018AA20",
+  "brand": "Intown",
+  "sub_brand": "Uptown Suites",
+  "sign_type": "Stairwell Informational — directional face",
+  "description": "Uptown Suites — Stairwell Informational — directional face",
+  "physical_size": {
+    "width_in": 14.5,
+    "height_in": 18.0,
+    "shape": "rectangle"
+  },
+  "page_size": {
+    "width_in": 14.5,
+    "height_in": 18.0,
+    "bleed_in": 0.0,
+    "_note": "No bleed per Jerry's rule — white substrate, no digital print to edge."
+  },
+  "svg_viewBox_in": [
+    0,
+    0,
+    14.5,
+    18.0
+  ],
+  "units_per_inch": 13.49,
+  "manufacturing": {
+    "substrate": {
+      "material": "1/8 inch Clear Acrylic",
+      "color_origin": "Substrate is white (clear acrylic with white backing/lamination); no /Face-Cut separation required."
+    },
+    "face_paint": {
+      "code": "MAP-202-MA",
+      "system": "Matthews Paint",
+      "name": "White",
+      "process": "Surface Paint Color",
+      "spot_color_name_in_pdf": null,
+      "_note": "Per Jerry's 90253 reference pattern, white-substrate signs omit the /Face-Cut separation entirely."
+    },
+    "copy_paint": {
+      "code": "PMS Reflex Blue",
+      "system": "Pantone",
+      "name": "Reflex Blue C",
+      "process": "Surface Print Copy",
+      "spot_color_name_in_pdf": "Text",
+      "cmyk_fallback": {
+        "c": 69.5,
+        "m": 57.77,
+        "y": 0,
+        "k": 52.01
+      },
+      "cmyk_source": "Production archive scan (142 archival files)",
+      "alt_rgb_per_jerry_90253": {
+        "r": 0.146379,
+        "g": 0.202628,
+        "b": 0.479864
+      },
+      "alt_rgb_note": "Jerry's 90253 reference uses RGB ICCBased altspace, not CMYK. Match for byte-identical altspace if needed; CMYK fallback is the WebEsko-spec default."
+    },
+    "braille": {
+      "process": "Surface-applied braille per ADA Grade 2",
+      "spot_color_name_in_pdf": "Braille",
+      "cmyk_fallback": {
+        "c": 100,
+        "m": 100,
+        "y": 0,
+        "k": 0
+      }
+    },
+    "mounting": "VHB Tape (per MSDQ)"
+  },
+  "unit_conversion": {
+    "rule": "All EPS-source numeric values (font_size, positions) are in EPS userspace units. Convert to PDF points via formula below.",
+    "formula": "pt_value = eps_value × (72 / units_per_inch)",
+    "for_this_brand": {
+      "units_per_inch": 13.49,
+      "pt_per_unit": 5.3373,
+      "example": "EPS font_size 28.0 × (72/13.49) = 149.44 pt"
+    }
+  },
+  "esko_spot_colors_used": [
+    "Text",
+    "Braille"
+  ],
+  "esko_spot_colors_omitted": {
+    "Face-Cut": "White acrylic substrate per Jerry 90253 reference — no face paint separation needed."
+  },
+  "reference": {
+    "jerry_template": "UPTOWN SUITES MSDQ 11.pdf (sent 2026-06-10)",
+    "modeled_after": "Jerry's 90253 reference (Intown Stairwell) — same white-acrylic + Reflex Blue pattern.",
+    "msdq_page": 24,
+    "jerry_template_match": "Jerry's UPTOWN SUITES MSDQ 11.pdf covers exactly this form (UPTSTR015018AA20)."
+  },
+  "fields": [
+    {
+      "id": "STATIC_ROOF_ACCESS_TEXT",
+      "type": "text",
+      "content_kind": "static",
+      "_note": "Static word 'ROOF ACCESS' always appears. Only the 'NO' prefix is variable.",
+      "source_text": "ROOF ACCESS",
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.50333580429948,
+        "anchor_h": "left",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "STATIC_THROUGH",
+      "type": "text",
+      "content_kind": "static",
+      "source_text": "THROUGH",
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.50333580429948,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "STATIC_DOWN_TO_LEVEL",
+      "type": "text",
+      "content_kind": "static",
+      "source_text": "DOWN TO LEVEL",
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.50333580429948,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "STATIC_FOR_EXIT_DISCHARGE",
+      "type": "text",
+      "content_kind": "static",
+      "source_text": "FOR EXIT DISCHARGE",
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.50333580429948,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "STAIR_DIRECTION",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 27.0008,
+        "y_pt_top": 42.9705,
+        "w_pt": 990.0251,
+        "h_pt": 115.8351
+      },
+      "placeholder_example": "NORTH STAIR",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 158.57,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "ROOF_ACCESS_PREFIX",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 25.1803,
+        "y_pt_top": 193.0977,
+        "w_pt": 171.6642,
+        "h_pt": 90.6271
+      },
+      "placeholder_example": "NO",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.5,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "FLOOR_NUMBER",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 354.6814,
+        "y_pt_top": 325.5745,
+        "w_pt": 334.6639,
+        "h_pt": 452.5859
+      },
+      "placeholder_example": "2",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 653.8,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "RANGE_START",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 131.4494,
+        "y_pt_top": 840.5746,
+        "w_pt": 80.0593,
+        "h_pt": 88.3855
+      },
+      "placeholder_example": "1",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.5,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "RANGE_END",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 828.3709,
+        "y_pt_top": 840.5746,
+        "w_pt": 80.0593,
+        "h_pt": 88.3855
+      },
+      "placeholder_example": "4",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.5,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "ARROW",
+      "type": "icon",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 178.5322,
+        "y_pt_top": 937.3343,
+        "w_pt": 116.1394,
+        "h_pt": 116.8332
+      },
+      "placeholder_example": "↓",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "icon_rotation_set": [
+        "UP",
+        "DOWN",
+        "LEFT",
+        "RIGHT"
+      ],
+      "_note": "Renderer rotates arrow glyph per direction parameter. Direction word + arrow must match."
+    },
+    {
+      "id": "DIRECTION_WORD",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 309.8669,
+        "y_pt_top": 947.3311,
+        "w_pt": 359.114,
+        "h_pt": 90.6271
+      },
+      "placeholder_example": "DOWN",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.5,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    },
+    {
+      "id": "DISCHARGE_LEVEL",
+      "type": "text",
+      "content_kind": "variable",
+      "bbox": {
+        "x_pt": 535.2445,
+        "y_pt_top": 1056.3291,
+        "w_pt": 80.0593,
+        "h_pt": 90.6271
+      },
+      "placeholder_example": "1",
+      "overlay_spot_color": {
+        "spot_name": "Text",
+        "rule": "Renderer MUST overlay this text in the /Text named spot color from the base PDF's ColorSpace dict. Do NOT use /White or any other spot."
+      },
+      "font": {
+        "family": "Swiss721MdBT-Medium",
+        "font_size_pt": 121.5,
+        "anchor_h": "center",
+        "anchor_v": "baseline"
+      }
+    }
+  ],
+  "combination_sign": true,
+  "combination_explanation": "Static prefix words ('NO ROOF ACCESS', 'THROUGH', 'DOWN TO LEVEL', 'FOR EXIT DISCHARGE') baked into base PDF. 8 variable fields overlaid per order.",
+  "face_variants": {
+    "directional": "↓ arrow + 'DOWN TO LEVEL X FOR EXIT DISCHARGE' (this spec)",
+    "exit_discharge": "★ star + 'EXIT DISCHARGE / THIS LEVEL' (sibling face; same template w/ different statics)"
+  }
+}

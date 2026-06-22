@@ -2,6 +2,9 @@
   "sign_id": "88668",
   "sign_type": "RMN",
   "description": "ALOFT 2019 ROOM NUMBER",
+  "template_type": "VARIABLE_pure",
+  "static": false,
+  "combination_sign": false,
   "svg_viewBox": "49.0 0.0 274.0 395.0",
   "units_per_inch": 54,
   "physical_size": {
@@ -11,6 +14,11 @@
   "page_size": {
     "width_in": 5.5,
     "height_in": 7.75
+  },
+  "field_review": {
+    "status": "needs_review",
+    "reviewer": "Elaine",
+    "notes": "Initial template created from known 88668 sample."
   },
   "eps_source": {
     "braille": {
@@ -30,8 +38,7 @@
       "value": "BRAILLE",
       "start_x_pt": 121.8151,
       "baseline_y_pt": 332.5533,
-      "font_size_pt": 24.0001,
-      "glyph_advance_pt": null
+      "font_size_pt": 24.0001
     },
     "room_number": {
       "ps_command": "88.415 215.527 mo (245) [36.478 36.4785 0 ] xsh",
@@ -64,20 +71,28 @@
     {
       "id": "ROOM_NUMBER",
       "type": "room-number",
-      "source": "eps",
-      "value": "245",
+      "content_kind": "variable",
+      "rect_id": "TEXT_FIELD__ROOM_NUM",
+      "alignment": {
+        "horizontal": "left",
+        "vertical": "cap-center"
+      },
+      "ada": {
+        "max_cap_height_in": 2,
+        "min_clearance_in": 0.375
+      },
       "font": {
-        "source_font": "VKKPTQ+GalaxiePolaris-Medium*1",
-        "font_matrix": [
-          69.7503,
-          0.0,
-          0.0,
-          -69.7503,
-          0.0,
-          0.0
-        ],
-        "font_size": 69.7503,
-        "font_size_pt": 93.0004
+        "family": "Galaxie Polaris Medium",
+        "file": "Polaris_V2_Medium.otf",
+        "cap_height_ratio": 0.78,
+        "tracking_em": 0.01
+      },
+      "bbox_review": {
+        "status": "needs_review",
+        "x_adjust": 0,
+        "y_adjust": 0,
+        "anchor_adjust_x": 0,
+        "anchor_adjust_y": 0
       },
       "eps_position": {
         "start_x": 88.415,
@@ -92,14 +107,70 @@
           0.0
         ]
       },
+      "eps_font": {
+        "source_font": "VKKPTQ+GalaxiePolaris-Medium*1",
+        "font_matrix": [
+          69.7503,
+          0.0,
+          0.0,
+          -69.7503,
+          0.0,
+          0.0
+        ],
+        "font_size": 69.7503,
+        "font_size_pt": 93.0004
+      },
+      "eps_value": "245",
       "ps_command": "88.415 215.527 mo (245) [36.478 36.4785 0 ] xsh"
     },
     {
       "id": "BRAILLE_TEXT",
       "type": "braille-label",
-      "source": "eps",
-      "value": "BRAILLE",
+      "content_kind": "variable",
+      "rect_id": "TEXT_FIELD__BRAILLE",
+      "alignment": {
+        "horizontal": "center",
+        "vertical": "cap-center"
+      },
       "font": {
+        "production_font": "California Braille",
+        "file": "FUTURAMC.TTF",
+        "font_size_pt": 18,
+        "cap_height_ratio": 0.7129
+      },
+      "render_method": {
+        "preferred": "california_braille_font_18pt",
+        "fallback": "geometric_circles",
+        "forbidden": [
+          "FuturaBT-MediumCondensed",
+          "NotoSansSymbols2",
+          "Any Unicode braille pattern font other than California Braille at 18pt"
+        ]
+      },
+      "dot_spec": {
+        "dot_diameter_in": 0.059,
+        "dot_height_raised_in": 0.025,
+        "intra_cell_spacing_in": 0.09,
+        "inter_cell_spacing_in": 0.241,
+        "line_spacing_in": 0.395
+      },
+      "bbox_review": {
+        "status": "needs_review",
+        "x_adjust": 0,
+        "y_adjust": 0,
+        "anchor_adjust_x": 0,
+        "anchor_adjust_y": 0
+      },
+      "eps_position": {
+        "start_x": 91.3613,
+        "baseline_y": 249.415,
+        "start_x_pt": 121.8151,
+        "baseline_y_pt": 332.5533,
+        "glyph_advance": null,
+        "glyph_advance_pt": null,
+        "glyph_advances": null
+      },
+      "eps_font": {
         "source_font": "VKKPTP+FuturaBT-MediumCondensed*1",
         "font_matrix": [
           18.0001,
@@ -112,12 +183,7 @@
         "font_size": 18.0001,
         "font_size_pt": 24.0001
       },
-      "eps_position": {
-        "start_x": 91.3613,
-        "baseline_y": 249.415,
-        "start_x_pt": 121.8151,
-        "baseline_y_pt": 332.5533
-      },
+      "eps_value": "BRAILLE",
       "ps_command": "91.3613 249.415 mo (BRAILLE)sh"
     }
   ],
@@ -126,7 +192,7 @@
     "formula": "pt_value = eps_value \u00d7 (72 / units_per_inch)",
     "for_this_brand": {
       "units_per_inch": 54,
-      "pt_per_unit": 1.3333333333333333
+      "pt_per_unit": 1.333333
     }
   }
 }

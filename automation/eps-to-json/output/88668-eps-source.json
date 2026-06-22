@@ -18,8 +18,7 @@
       "value": "BRAILLE",
       "start_x_pt": 121.8151,
       "baseline_y_pt": 332.5533,
-      "font_size_pt": 24.0001,
-      "glyph_advance_pt": null
+      "font_size_pt": 24.0001
     },
     "room_number": {
       "ps_command": "88.415 215.527 mo (245) [36.478 36.4785 0 ] xsh",
