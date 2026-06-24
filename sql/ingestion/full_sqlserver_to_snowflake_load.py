@@ -76,6 +76,7 @@ try:
         source_schema = row["TABLE_SCHEMA"]
         source_table = row["TABLE_NAME"]
         target_table = clean_name(source_table)
+        staging_table = f"{target_table}__STAGING"
 
         try:
 
@@ -86,8 +87,11 @@ try:
                 f"Loading {source_schema}.{source_table}"
             )
             print(
-                f"Target: {TARGET_DATABASE}.{TARGET_SCHEMA}.{target_table}"
-            )
+    f"Final target: {TARGET_DATABASE}.{TARGET_SCHEMA}.{target_table}"
+    )
+            print(
+                f"Staging target: {TARGET_DATABASE}.{TARGET_SCHEMA}.{staging_table}"
+)
 
             source_query = f"""
             SELECT *
@@ -96,6 +100,9 @@ try:
 
             first_chunk = True
             total_rows = 0
+            cur.execute(f"""
+            DROP TABLE IF EXISTS {TARGET_DATABASE}.{TARGET_SCHEMA}.{staging_table}
+            """)
 
             for chunk in pd.read_sql(
                 source_query,
@@ -109,14 +116,14 @@ try:
                 ]
 
                 success, nchunks, nrows, _ = write_pandas(
-                    conn=snowflake_conn,
-                    df=chunk,
-                    table_name=target_table,
-                    database=TARGET_DATABASE,
-                    schema=TARGET_SCHEMA,
-                    auto_create_table=True,
-                    overwrite=first_chunk,
-                )
+                conn=snowflake_conn,
+                df=chunk,
+                table_name=staging_table,
+                database=TARGET_DATABASE,
+                schema=TARGET_SCHEMA,
+                auto_create_table=True,
+                overwrite=first_chunk,
+            )
 
                 total_rows += nrows
                 first_chunk = False
@@ -125,11 +132,19 @@ try:
                     f"  Loaded chunk rows: {nrows:,}"
                     f" | Running total: {total_rows:,}"
                 )
+                cur.execute(f"""
+                CREATE OR REPLACE TABLE {TARGET_DATABASE}.{TARGET_SCHEMA}.{target_table} AS
+                SELECT *
+                FROM {TARGET_DATABASE}.{TARGET_SCHEMA}.{staging_table}
+                """)
 
-            print(
-                f"SUCCESS: {source_schema}.{source_table}"
-                f" ({total_rows:,} rows)"
-            )
+                cur.execute(f"""
+                DROP TABLE IF EXISTS {TARGET_DATABASE}.{TARGET_SCHEMA}.{staging_table}
+                """)
+                print(
+                    f"SUCCESS: {source_schema}.{source_table}"
+                    f" ({total_rows:,} rows)"
+                )
 
             successful_tables.append(
                 {
@@ -153,7 +168,12 @@ try:
                     "error": str(table_error),
                 }
             )
-
+            try:
+                cur.execute(f"""
+                DROP TABLE IF EXISTS {TARGET_DATABASE}.{TARGET_SCHEMA}.{staging_table}
+                """)
+            except Exception:
+                pass
             continue
     validation_rows = []
 
@@ -229,6 +249,7 @@ try:
     validation_df = pd.DataFrame(validation_rows)
 
     if not validation_df.empty:
+        
         write_pandas(
             conn=snowflake_conn,
             df=validation_df,
